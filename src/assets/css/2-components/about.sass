@@ -6,12 +6,9 @@
 /*----------------------------skills----------------------------
 
 .skills
-  padding: 0px
-  margin: 0px
   z-index: 1000
-  width: 100%
   background-color: white
-  min-height: 500px
+  //min-height: 500px
 
 .skill-row
     margin: 0
@@ -19,21 +16,24 @@
 
 .col-skills
     text-align: center
-    padding: 0
     margin:
-        top: 100px
-        bottom: 175px
+        top: 60px
+        bottom: 120px
         background-color: transparent
     @media screen and (max-width: 992px)
         margin:
             bottom: 70px
             top: 50px
 
-.ic-skill
+.ic-skill-hidden
   opacity: 0
   transform: scale(0)
   height: 120px
-  transition: all 0.1s linear
+  transition: all 0.5s ease-out
+
+.ic-skill-showing
+    opacity: 1
+    transform: scale(1)
 
 .p-skills
   margin-top: 40px
@@ -43,31 +43,37 @@
   font-weight: 500
   color: $mid-grey
   opacity: 0
-  transition: all 0.1s linear
-
-.p-skill
-  margin-top: 10px
-  font-size: 20px
-  font-family: 'Open Sans'
-  font-weight: 500
-  color: $mid-grey
-  opacity: 0
-  transition: all 0.9s ease-in-out
+  transition: all 0.6s ease-out
 
 .p-showing
-  opacity: 1
+    opacity: 1
 
-.bar-skill
-  display: inline-block
-  margin-right: 3px
-  margin-left: 3px
-  width: 10px
-  height: 10px
-  background-color: $mid-blue
-  transform: scale(0)
-  transition: all 0.1s linear
+.p-skill-hidden
+    margin-top: 10px
+    font-size: 20px
+    font-family: 'Open Sans'
+    font-weight: 500
+    color: $mid-grey
+    opacity: 0
+    transition: all 0.9s ease-out
 
-.bar-skill-blank
+.p-skill-showing
+    opacity: 1
+
+.bar-skill-hidden
+    display: inline-block
+    margin-right: 3px
+    margin-left: 3px
+    width: 10px
+    height: 10px
+    background-color: $mid-blue
+    transform: scale(0)
+    transition: all 0.8s linear
+
+.bar-skill-showing
+    transform: scale(1)
+
+.bar-skill-blank-hidden
   display: inline-block
   margin-right: 3px
   margin-left: 3px
@@ -75,7 +81,10 @@
   height: 10px
   background-color: #b3b3b3
   transform: scale(0)
-  transition: all 0.1s linear
+  transition: all 0.8s ease-out
+
+.bar-skill-blank-showing
+    transform: scale(1)
 
 //----------------------------about----------------------------//
 
@@ -164,7 +173,7 @@
     padding-bottom: 60px
 
 .col-btns
-    padding-top: 50px
+    padding-top: 70px
 
 .btn-learnmore
     margin-bottom: 60px

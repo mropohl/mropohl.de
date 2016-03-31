@@ -1,11 +1,10 @@
 var main = function() {
 
-    var mqSuperSmall = window.matchMedia( "(min-width: 320px)" );
-    var mqVerySmall = window.matchMedia( "(min-width: 481px)" );
-    var mqSmall = window.matchMedia( "(min-width: 641px)" );
-    var mqLarge = window.matchMedia( "(min-width: 961px)" );
-    var mqVeryLarge = window.matchMedia( "(min-width: 1025px)" );
-    var mqSuperLarge = window.matchMedia( "(min-width: 1281px)" );
+    var mqVerySmall = window.matchMedia( "(max-width: 480px)" );
+    var mqSmall = window.matchMedia( "(max-width: 768px)" );
+    var mqMedium = window.matchMedia( "(max-width: 992px)" );
+    var mqLarge = window.matchMedia( "(max-width: 1200px)" );
+    var mqVeryLarge = window.matchMedia( "(min-width: 1200px)" );
 
     var indicatorClicked = 0;
 
@@ -93,7 +92,7 @@ var main = function() {
                 $(".ind-4").addClass("indicator-active");
             }
         }
-    })//---- ENDE Waypoints
+    })
 
     //----------------------- Page Load Hero -----------------------//
 
@@ -101,7 +100,6 @@ var main = function() {
         "opacity": 1,
         "transform": "scale(1)"
     });
-
 
     //----------------------- Indicator: Click -----------------------//
 
@@ -229,9 +227,20 @@ var main = function() {
 
         var scrollHeight = $(this).scrollTop();
 
-        var heroOpacity = 1 - scrollHeight*0.0008;
-
         var windowWidth = $(window).width();
+
+
+        function animSkills () {
+            $(".ic-skill-hidden").addClass("ic-skill-showing");
+            $(".p-skill-hidden").addClass("p-skill-showing");
+            $(".bar-skill-hidden").addClass("bar-skill-showing");
+            $(".bar-skill-blank-hidden").addClass("bar-skill-blank-showing");
+            $(".p-skills").addClass("p-showing");
+        };
+
+        if(scrollHeight > $(".hero-text").offset().top ) {
+            animSkills();
+        }
 
         //----------------------- Animations about, portrait, text -----------------------//
 
@@ -253,108 +262,10 @@ var main = function() {
             window.requestAnimationFrame(animAbout);
 
         }
-        //----------------------- Animations Skills -----------------------//
-
-        var icScale;
-        var icOpacity;
-
-        if ($(window).height() <= 800) {
-            var icScale = Math.round(100 * scrollHeight * 0.003) / 100.0 -0.5 ;
-            var icOpacity = Math.round(100 * scrollHeight * 0.00300) / 100.0 -0.3 ;
-        }
-
-        else {
-            var icScale = Math.round(100 * scrollHeight * 0.00300) / 100.0 -1.0 ;
-            var icOpacity = Math.round(100 * scrollHeight * 0.00300) / 100.0 -0.8 ;
-        }
-
-        function animSkills () {
-            $(".ic-skill").css({
-                "transform": "scale("+ icScale +")",
-                "opacity": icOpacity
-            });
-            $(".p-skill").css({
-                "opacity": icOpacity
-            });
-            $(".bar-skill").css({
-                "transform": "scale("+ icScale +")",
-                "opacity": icOpacity
-            });
-            $(".bar-skill-blank").css({
-                "transform": "scale("+ icScale +")",
-                "opacity": icOpacity
-            });
-        };
-
-        function animSkillsVis() {
-            $(".ic-skill").css({
-                "transform": "scale(1)",
-                "opacity": "1"
-            });
-            $(".p-skill").css({
-                "opacity": "1"
-            });
-            $(".bar-skill").css({
-                "transform": "scaleX(1)",
-                "opacity": "1"
-            });
-            $(".bar-skill-blank").css({
-                "transform": "scaleX(1)",
-                "opacity": "1"
-            });
-        };
-
-        function animSkillsDis() {
-            $(".ic-skill").css({
-                "transform": "scale(0)",
-                "opacity": "0"
-            });
-            $(".p-skill").css({
-                "opacity": "0"
-            });
-            $(".bar-skill").css({
-                "transform": "scaleX(0)",
-                "opacity": "0"
-            });
-            $(".bar-skill-blank").css({
-                "transform": "scaleX(0)",
-                "opacity": "0"
-            });
-        };
-
-        //----nicht mobile
-        if(window.matchMedia("(min-width: 768px)").matches) {
-
-            if(scrollHeight > $(".navbar-brand").offset().top) {
-
-                $(".p-skills").addClass("p-showing");
-
-                if ( icScale <=1 && icScale >= 0) {
-                    window.requestAnimationFrame(animSkills);
-                }
-
-                else if (icScale >=1){
-                    animSkillsVis;
-                }
-
-                else {
-                    animSkillsDis;
-                }
-
-            }
-        }
-        //----mobile
-        else {
-
-            $(".p-skills").addClass("p-showing");
-
-            animSkillsVis;
-
-        }
 
         //----------------------- Animations Social -----------------------//
 
-        if($(".about-text").offset().top < scrollHeight) {
+        if($(".portrait").offset().top < scrollHeight) {
 
             $(".ic-social").each(function(i) {
 
@@ -379,7 +290,27 @@ var main = function() {
 
         //------------ Animations Thumbs ------------//
 
-        var figureHeight = Math.round(scrollHeight * 0.45) -1100;
+        var figureHeight;
+
+        if(mqVeryLarge.matches) {
+            figureHeight = Math.round(scrollHeight * 0.45) -1000;
+        }
+
+        if(mqLarge.matches) {
+            figureHeight = Math.round(scrollHeight * 0.45) -1020;
+        }
+
+        if(mqMedium.matches) {
+            figureHeight = Math.round(scrollHeight * 0.45) -1590;
+        }
+
+        if(mqSmall.matches) {
+            figureHeight = Math.round(scrollHeight * 0.45) -1550;
+        }
+
+        if(mqVerySmall.matches) {
+            figureHeight = Math.round(scrollHeight * 0.45) -1570;
+        }
 
         var figureOpacity = Math.round(100 * scrollHeight * 0.00095) / 100 - 1.4;
         var pthumbOpacity = Math.round(100 * scrollHeight * 0.00095) / 100 - 1.7;
@@ -396,11 +327,13 @@ var main = function() {
             });
         }
 
-        if(figureHeight < 700 && figureHeight > -1400) {
+        if(figureHeight < 1000 && figureHeight > -3800) {
 
             window.requestAnimationFrame(animThumbs);
 
         }
+
+
 
     }); //----ENDE Scroll Funktion
 
