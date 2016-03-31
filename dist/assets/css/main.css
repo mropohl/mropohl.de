@@ -206,6 +206,7 @@ header {
   text-align: center;
   padding: 0px;
   background-image: url("../images/header-bg.jpg");
+  background-position: center 30%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   overflow: hidden;
@@ -283,12 +284,8 @@ header {
 
 /*----------------------------skills---------------------------- */
 .skills {
-  padding: 0px;
-  margin: 0px;
   z-index: 1000;
-  width: 100%;
-  background-color: white;
-  min-height: 500px; }
+  background-color: white; }
 
 .skill-row {
   margin: 0;
@@ -296,20 +293,23 @@ header {
 
 .col-skills {
   text-align: center;
-  padding: 0;
-  margin-top: 100px;
-  margin-bottom: 175px;
+  margin-top: 60px;
+  margin-bottom: 120px;
   margin-background-color: transparent; }
   @media screen and (max-width: 992px) {
     .col-skills {
       margin-bottom: 70px;
       margin-top: 50px; } }
 
-.ic-skill {
+.ic-skill-hidden {
   opacity: 0;
   transform: scale(0);
   height: 120px;
-  transition: all 0.1s linear; }
+  transition: all 0.5s ease-out; }
+
+.ic-skill-showing {
+  opacity: 1;
+  transform: scale(1); }
 
 .p-skills {
   margin-top: 40px;
@@ -319,21 +319,24 @@ header {
   font-weight: 500;
   color: #676767;
   opacity: 0;
-  transition: all 0.1s linear; }
+  transition: all 0.6s ease-out; }
 
-.p-skill {
+.p-showing {
+  opacity: 1; }
+
+.p-skill-hidden {
   margin-top: 10px;
   font-size: 20px;
   font-family: 'Open Sans';
   font-weight: 500;
   color: #676767;
   opacity: 0;
-  transition: all 0.9s ease-in-out; }
+  transition: all 0.9s ease-out; }
 
-.p-showing {
+.p-skill-showing {
   opacity: 1; }
 
-.bar-skill {
+.bar-skill-hidden {
   display: inline-block;
   margin-right: 3px;
   margin-left: 3px;
@@ -341,9 +344,12 @@ header {
   height: 10px;
   background-color: #5c6bc0;
   transform: scale(0);
-  transition: all 0.1s linear; }
+  transition: all 0.8s linear; }
 
-.bar-skill-blank {
+.bar-skill-showing {
+  transform: scale(1); }
+
+.bar-skill-blank-hidden {
   display: inline-block;
   margin-right: 3px;
   margin-left: 3px;
@@ -351,7 +357,10 @@ header {
   height: 10px;
   background-color: #b3b3b3;
   transform: scale(0);
-  transition: all 0.1s linear; }
+  transition: all 0.8s ease-out; }
+
+.bar-skill-blank-showing {
+  transform: scale(1); }
 
 .about {
   position: relative;
@@ -431,7 +440,7 @@ header {
       padding-bottom: 60px; } }
 
 .col-btns {
-  padding-top: 50px; }
+  padding-top: 70px; }
 
 .btn-learnmore {
   margin-bottom: 60px; }
@@ -535,11 +544,14 @@ header {
   color: #424242;
   opacity: 1; }
 
+.con-row-showcase {
+  margin-bottom: 150px; }
+
 .col-showcase {
   display: flex;
   justify-content: center;
   max-height: 400px;
-  margin-bottom: 150px; }
+  margin-bottom: 60px; }
 
 figure {
   margin: 0px;
