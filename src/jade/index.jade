@@ -1,0 +1,291 @@
+//output:../index.html
+
+doctype html
+html  
+    head  
+        title=MaxRopohl
+        meta(charset="utf-8")
+        meta(name="description", content = "Max Ropohl - Webdesigner und Programmierer. Meine persönliche Website.")
+        meta(name="viewport", content = "width=device-width", initial-scale = 1.0)
+        link(rel="stylesheet", href="assets/css/1-tools/bootstrap/bootstrap.min.css")
+        link(rel="stylesheet", href="assets/css/main.min.css")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic", type="text/css")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,500", type="text/css")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Montserrat:400,700", type="text/css")
+        link(rel="stylesheet", href='https://fonts.googleapis.com/css?family=Lato:400,100,300,300italic,100italic,400italic,700,700italic', type='text/css')
+        script(src="assets/js/jquery-2.2.1.min.js")
+        script(src="assets/js/jquery.waypoints.min.js")
+        script(src="assets/js/bootstrap/bootstrap.min.js")
+        script(src="assets/js/main.min.js")
+        
+        body
+            
+            header.header
+                
+                nav.navbar.navbar-own
+                    .container-fluid
+                        .navbar-header
+                            button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target="#navbar-col", aria-expanded="false")
+                                span.sr-only
+                                span.icon-bar
+                                span.icon-bar
+                                span.icon-bar
+                            
+                            h1.navbar-brand 
+                        
+                        #navbar-col.collapse.navbar-collapse
+                            ul.nav.navbar-nav.navbar-right
+                                li
+                                    a.nav-link.nav-2 Über Mich
+                                li
+                                    a.nav-link.nav-3 Projekte
+                                li
+                                    a.nav-link.nav-4 Kontakt
+                            
+                .container.hero-container        
+                    #waypoint-text.hero-text.text-center
+                        h1.hero-h1 Hi, ich bin Max 
+                        h2.hero-underline Webdesigner und Programmierer 
+            
+            .scrollbar
+                .indicator
+            
+                    span.bar-indicator.ind-1.indicator-active
+                                
+                    span.bar-indicator.ind-2 
+                                    
+                    span.bar-indicator.ind-3
+                                    
+                    span.bar-indicator.ind-4
+                    
+            #skills.skills.text-center
+            
+                p.p-skills meine Skills
+                
+                .row.skill-row
+                    .col-lg-3.col-md-3.col-sm-12.text-center.col-skills
+                    
+                        .icon.text-center
+                            img.ic-skill(src="assets/images/ic/ic_design.png")
+                            p.p-skill UX Design
+                            
+                            .skill-bar
+                                span.bar-skill 
+                                span.bar-skill 
+                                span.bar-skill 
+                                span.bar-skill 
+                                span.bar-skill 
+                                span.bar-skill 
+                                span.bar-skill 
+                                span.bar-skill-blank  
+                                span.bar-skill-blank 
+                                span.bar-skill-blank 
+                                
+                    .col-lg-3.col-md-3.col-sm-12.text-center.col-skills
+                    
+                        .icon
+                            img.ic-skill(src="assets/images/ic/ic_comm.png")
+                            p.p-skill  Kommunikation
+                            
+                            .skill-bar
+                                span.bar-skill 
+                                span.bar-skill 
+                                span.bar-skill 
+                                span.bar-skill 
+                                span.bar-skill 
+                                span.bar-skill 
+                                span.bar-skill 
+                                span.bar-skill 
+                                span.bar-skill-blank 
+                                span.bar-skill-blank 
+                                
+                    .col-lg-3.col-md-3.col-sm-12.text-center.col-skills
+                    
+                        .icon    
+                            img.ic-skill(src="assets/images/ic/ic_code.png")
+                            p.p-skill  Coding
+                            
+                            .skill-bar
+                                span.bar-skill 
+                                span.bar-skill 
+                                span.bar-skill 
+                                span.bar-skill 
+                                span.bar-skill 
+                                span.bar-skill 
+                                span.bar-skill 
+                                span.bar-skill 
+                                span.bar-skill-blank  
+                                span.bar-skill-blank 
+                                
+                    .col-lg-3.col-md-3.col-sm-12.text-center.col-skills
+                    
+                        .icon
+                            img.ic-skill(src="assets/images/ic/ic_orga.png")
+                            p.p-skill  Organisation
+                            
+                            .skill-bar
+                                span.bar-skill 
+                                span.bar-skill 
+                                span.bar-skill 
+                                span.bar-skill 
+                                span.bar-skill 
+                                span.bar-skill 
+                                span.bar-skill 
+                                span.bar-skill 
+                                span.bar-skill 
+                                span.bar-skill-blank 
+                    
+            
+            .about
+            
+                .container.portrait#waypoint-portrait1
+                    .row
+                        .col-md-4.col-md-offset-1.text-left.col-portrait
+                            img(src="assets/images/portrait.png")
+                        .col-md-6.col-portrait-text
+                            p.p-portrait
+                                | Ich bin Max Ropohl und ich lebe in Berlin.
+                            p.p-portrait    
+                                | Im Moment bin ich noch Schüler, werde aber bald mein Abitur in der Tasche haben.
+                                | Dann kann ich mich endlich darauf konzentrieren meine Träume wahr werden zu lassen...
+                    
+                .container.about-text#waypoint-portrait2
+                    .row.row-about-text
+                        .col-md-6.col-md-offset-1.col-about-text
+                            p.p-about
+                                | Mein Talent für Design kombiniere ich mit einer Leidenschaft für das Internet und alle andere Medien. 
+                                | Dadurch endstand mein Interesse für das gestalten und coden von Websiten.
+                                | Mir macht es Spaß mit anderen zusammen zu arbeiten und zu versuchen, ihre Ideen zu verwirklichen.
+                                | Außerdem bin ich ergeizig, will mich ständig verbessern und mein bestes abliefern. 
+                                
+                            
+                            p.p-about.p-about-disabled.p-disabled(style="font-weight: 400")
+                                | Meine Erfahrungen:  
+                            p.p-about.p-about-disabled
+                                | 2016: Abitur
+                            p.p-about.p-about-disabled
+                                | 2016 - ... : Medieninformatik Studium
+                                
+                        .col-md-4.text-center.col-btns#waypoint-showcase1
+                            .btn.btn-learnmore.btn-anim Erfahrungen
+                            .btn.btn-contact.btn-anim Kontakt
+                        
+                        
+                .container-fluid.container-social
+                        .row
+                            .col-md-2.col-md-offset-2.col-sm-6.col-xs-6.col-social
+                                .social
+                                    a(href="https://twitter.com/MaxRopohl")
+                                        img.ic-social(src="assets/images/ic/ic-twitter.png")
+                                    a.link-social(href="https://twitter.com/MaxRopohl") Twitter
+                                
+                            .col-md-2.col-sm-6.col-xs-6.col-social
+                                .social
+                                    a(href="https://www.instagram.com/maxropohl_/")
+                                        img.ic-social(src="assets/images/ic/ic-instagram.png")
+                                        a.link-social(href="https://www.instagram.com/maxropohl_/") Instagram
+                                
+                            .col-md-2.col-sm-6.col-xs-6.col-social
+                                .social
+                                    a(href="https://plus.google.com/113443353129276192931/posts")
+                                        img.ic-social(src="assets/images/ic/ic-google+.png")
+                                    a.link-social(href="https://plus.google.com/113443353129276192931/posts") Google+
+                            
+                            .col-md-2.col-sm-6.col-xs-6.col-social    
+                                .social
+                                    a(href="https://www.behance.net/RopohlDesign")
+                                        img.ic-social(src="assets/images/ic/ic-behance.png")
+                                    a.link-social(href="https://www.behance.net/RopohlDesign") Behance
+                
+                
+            .showcase.container-fluid.text-center
+                p.p-showcase meine Projekte
+                .container-fluid
+                    .row.container-thumbs
+                        .col-lg-3.col-md-4.col-sm-6.col-lg-offset-1.col-showcase
+                            figur.fig1
+                                img.thumb-img(src="assets/images/thumbnails/thumb_aquaris.jpg")
+                                figcaption.thumb-caption
+                                    h3 Webdesign für Aquaris
+                                    span
+                                        a.btn.btn-thumb(href="https://www.behance.net/RopohlDesign") angucken
+                            
+                        .col-lg-4.col-md-4.col-sm-6.col-showcase#waypoint-showcase2
+                            figure.fig1
+                                img.thumb-img(src="assets/images/thumbnails/thumb_ropohl.jpg")
+                                figcaption.thumb-caption
+                                    h3 Webdesign für Ropohl Architekt
+                                    span
+                                        a.btn.btn-thumb(href="https://www.behance.net/RopohlDesign") angucken
+                            
+                        .col-lg-3.col-md-4.col-sm-6.col-showcase
+                            figure.fig1
+                                img.thumb-img(src="assets/images/thumbnails/thumb_photo.jpg")
+                                figcaption.thumb-caption
+                                    h3 Webdesign für A&T Photgraphy
+                                    span
+                                        a.btn.btn-thumb(href="https://www.behance.net/RopohlDesign") angucken
+                            
+                        .col-lg-3.col-md-4.col-sm-6.col-lg-offset-1.col-showcase
+                            figure.fig1
+                                img.thumb-img(src="assets/images/thumbnails/thumb_steam.jpg")
+                                figcaption.thumb-caption
+                                    h3 Webdesign für dynamiK
+                                    span
+                                        a.btn.btn-thumb(href="https://www.behance.net/RopohlDesign") angucken
+                            
+                        .col-lg-4.col-md-4.col-sm-6.col-showcase
+                            figure.fig1
+                                img.thumb-img(src="assets/images/thumbnails/thumb_spon.jpg")
+                                figcaption.thumb-caption
+                                    h3 UI Design für Visa
+                                    span
+                                        a.btn.btn-thumb(href="https://www.behance.net/RopohlDesign") angucken
+                            
+                        .col-lg-3.col-md-4.col-sm-6.col-showcase
+                            figure.fig1
+                                img.thumb-img(src="assets/images/thumbnails/thumb_twitter.jpg")
+                                figcaption.thumb-caption
+                                    h3 UI Design von Apps
+                                    span
+                                        a.btn.btn-thumb(href="https://www.behance.net/RopohlDesign") angucken
+                
+            
+            #waypoint-contact.contact
+                .container.container-contact.text-center
+                    h4 Interessiert mit mir zu arbeiten?
+                    h5 Dann lassen sie es mich wissen.
+                .container    
+                    .row
+                        .col-md-8.col-sm-12
+                            form(method="POST", action="https://formspree.io/m.ropohl@outlook.de")
+                                input.input-contact(type="text", name="Name", placeholder="Ihr Name")
+                                input.input-contact(name="_replyto", type="email", placeholder="Ihre Email Adresse")
+                                textarea.textarea-contact(name="Nachricht", type="message", placeholder="Ihre Nachricht")
+                                input.submit-contact(type="submit", value="Abschicken")
+                            
+                        .col-md-4.col-sm-12.col-adress
+                            
+                            h5.h5-bold Hier können sie
+                            h5.h5-bold mich auch erreichen:
+                            
+                            div.adress-text
+                                p  Max Ropohl
+                                p Gerkrathstraße 13
+                                p 14129 Berlin
+                                p +49 0177 42 35 682
+                                
+                            a(href="https://twitter.com/MaxRopohl")   
+                                img.ic-contact(src="assets/images/ic/ic-twitter.png")
+                            a(href="https://www.instagram.com/maxropohl_/")
+                                img.ic-contact(src="assets/images/ic/ic-instagram.png")
+                            a(href="https://plus.google.com/113443353129276192931/posts")
+                                img.ic-contact(src="assets/images/ic/ic-google+.png")
+                            a(href="https://www.behance.net/RopohlDesign")
+                                img.ic-contact(src="assets/images/ic/ic-behance.png")
+                            
+            .imprint
+                .container.text-center
+                    a(href="imprint.html") IMPRESSUM
+            
+            

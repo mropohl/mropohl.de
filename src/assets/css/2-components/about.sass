@@ -1,0 +1,255 @@
+// main: ../main.sass
+
+@import "../1-tools/bourbon/bourbon.scss"
+@import "vars"
+
+/*----------------------------skills----------------------------
+
+.skills
+  padding: 0px
+  margin: 0px
+  z-index: 1000
+  width: 100%
+  background-color: white
+  min-height: 500px
+
+.skill-row
+    margin: 0
+    padding: 0
+
+.col-skills
+    text-align: center
+    padding: 0
+    margin:
+        top: 100px
+        bottom: 175px
+        background-color: transparent
+    @media screen and (max-width: 992px)
+        margin:
+            bottom: 70px
+            top: 50px
+
+.ic-skill
+  opacity: 0
+  transform: scale(0)
+  height: 120px
+  transition: all 0.1s linear
+
+.p-skills
+  margin-top: 40px
+  margin-left: 0px
+  font-size: 20px
+  font-family: 'Open Sans'
+  font-weight: 500
+  color: $mid-grey
+  opacity: 0
+  transition: all 0.1s linear
+
+.p-skill
+  margin-top: 10px
+  font-size: 20px
+  font-family: 'Open Sans'
+  font-weight: 500
+  color: $mid-grey
+  opacity: 0
+  transition: all 0.9s ease-in-out
+
+.p-showing
+  opacity: 1
+
+.bar-skill
+  display: inline-block
+  margin-right: 3px
+  margin-left: 3px
+  width: 10px
+  height: 10px
+  background-color: $mid-blue
+  transform: scale(0)
+  transition: all 0.1s linear
+
+.bar-skill-blank
+  display: inline-block
+  margin-right: 3px
+  margin-left: 3px
+  width: 10px
+  height: 10px
+  background-color: #b3b3b3
+  transform: scale(0)
+  transition: all 0.1s linear
+
+//----------------------------about----------------------------//
+
+.about
+    position: relative
+    margin: 0px
+    padding: 0px
+    z-index: 1000
+    width: 100%
+    background-color: $very-dark-blue
+    overflow: hidden
+
+.portrait
+  padding-top: 120px
+  background-color: transparent
+
+  img
+    z-index: 1
+    display: block
+    //margin-left: auto
+    //margin-right: auto
+    height: 300px
+    @media screen and (max-width: 480px)
+        height: 250px
+
+.about-text
+  opacity: 1
+  margin-top: 80px
+  margin-bottom: 100px
+
+.col-portrait-text
+    padding-top: 40px
+
+.row-about-text
+    //margin-bottom: 80px
+
+.p-portrait
+    //margin-top: 20px
+    text-align: left
+    font-size: 24px
+    line-height: 170%
+    color: white
+    font-family: 'Lato'
+    font-weight: 300
+    @media screen and (max-width: 768px)
+        font:
+            size: 2.2rem
+    @media screen and (max-width: 480px)
+        text-align: left
+        font:
+            size: 1.9rem
+
+.p-about
+    text-align: left
+    font-size: 24px
+    line-height: 170%
+    color: white
+    font-family: 'Lato'
+    font-weight: 300
+    @media screen and (max-width: 768px)
+        font:
+            size: 2.2rem
+    @media screen and (max-width: 480px)
+        text-align: left
+        font:
+            size: 1.9rem
+
+.p-about-disabled
+    margin-top: 10px
+
+.p-disabled
+    margin-top: 40px
+
+
+.about-btn
+  margin-left: auto
+  margin-right: auto
+  max-width: 900px
+
+.row-about
+  margin-top: 80px
+  padding-bottom: 80px
+
+  @media screen and (max-width: 768px)
+    margin-top: 40px
+    padding-bottom: 60px
+
+.col-btns
+    padding-top: 50px
+
+.btn-learnmore
+    margin-bottom: 60px
+
+.btn-anim
+  transform: scale(1)
+  transition: transform 0.3s ease-out
+  @media screen and (max-width: 768px)
+    margin-top: 40px
+
+.container-social
+    padding-top: 70px
+    background-color: #575c82
+    min-height: 220px
+    @media screen and (max-width: 992px)
+        padding-top: 40px
+
+.col-social
+    //background: pink
+    //border: 1px solid green
+    margin:
+        bottom: 40px
+    @media screen and (min-width: 992px)
+        margin:
+            bottom: 70px
+
+.social
+    text-align: center
+    //background: white
+    max-width: 190px
+    position: relative
+    display: block
+    margin-left: auto
+    margin-right: auto
+
+    @media screen and (max-width: 970px)
+        text-align: left
+
+    a
+        cursor: pointer
+        margin-top: 5px
+        margin-bottom: 5px
+        position: relative
+        display: inline-block
+        color: white
+        font:
+            size: 18px
+            family: "Open Sans"
+            weight: 400
+        margin-right: 0px
+
+        @media screen and (max-width: 1250px)
+            display: block
+            margin-left: 0px
+
+        @media screen and (max-width: 970px)
+            display: inline-block
+            margin-left: 10px
+
+        @media screen and (max-width: 768px)
+            margin:
+                right: 0
+
+        @media screen and (max-width: 480px)
+            font:
+                size: 1.5rem
+            display: block
+            text-align: center
+            margin:
+                left: 0
+                right: 0
+
+.div-social
+    border: 1px solid black
+
+.ic-social
+    cursor: pointer
+    @include size(80px  80px)
+    transform: scale(0)
+    transition: all 0.2s ease-out
+
+    @media screen and (max-width: 480px)
+        @include size(70px  70px)
+
+.link-social
+    margin-left: 10px
+    opacity: 0
+    transition: all 0.6s ease-out

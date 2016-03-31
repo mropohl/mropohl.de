@@ -1,0 +1,106 @@
+// main: ../main.sass
+
+@import "../1-tools/bourbon/bourbon.scss"
+@import "vars"
+
+/*----------------------------showcase----------------------------
+
+.showcase
+    overflow: hidden
+    padding-top: 0
+    padding-bottom: 150px
+    width: 100%
+    background-color: white
+    //min-height: 600px
+    z-index: 1
+
+.p-showcase
+    margin-top: 0px
+    margin-bottom: 40px
+    margin-left: 0px
+    font-size: 20px
+    font-family: 'Open Sans'
+    font-weight: 500
+    color: #424242
+    opacity: 1
+
+
+.col-showcase
+    display: flex
+    justify-content: center
+    max-height: 400px
+    margin:
+        bottom: 150px
+
+figure
+    margin: 0px
+    position: relative
+
+.thumb-caption
+    opacity: 0
+    height: 100%
+    width: 100%
+    max-width: 380px
+    position: absolute
+    top: 0
+    left: 0
+    padding: 20px
+    background: #1c2153
+    color: white
+    transition: all 0.4s ease-out
+
+    @media screen and (max-width: 320px)
+        padding-top: 50px
+
+    h3
+        display: block
+        position: relative
+        margin:
+            bottom: 20px
+            top: 60px
+        font:
+            size: 2rem
+            family: "Open Sans"
+        text-align: center
+
+        @media screen and (max-width: 1400px)
+            margin:
+                bottom: 20px
+                top: 50px
+            font:
+                size: 1.6rem
+                family: "Open Sans"
+
+        @media screen and (max-width: 380px)
+            margin:
+                bottom: 20px
+                top: 40px
+            font:
+                size: 1.5rem
+                family: "Open Sans"
+
+        @media screen and (max-width: 320px)
+            display: none
+
+    &:hover
+        transform: translateY(0px)
+        opacity: 0.95
+
+.thumb-img
+    display: block
+    position: relative
+    max-width: 380px
+    max-height: 250px
+    border: 1px solid rgba(1, 1, 1, 0.2)
+
+    @media screen and (min-width: 1400px)
+        max-width: 380px
+
+    @media screen and (max-width: 1400px)
+        max-width: 320px
+
+    @media screen and (max-width: 400px)
+        max-width: 280px
+
+    @media screen and (max-width: 320px)
+        max-width: 220px

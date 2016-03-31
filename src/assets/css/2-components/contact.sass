@@ -1,0 +1,124 @@
+// main: ../main.sass
+
+@import "../1-tools/bourbon/bourbon.scss"
+@import "vars"
+
+.container-contact
+    z-index: 10000
+    margin:
+        bottom: 90px
+    padding:
+        top: 100px
+h4
+    color: white
+    font:
+        family: "Montserrat"
+        weight: 500
+        size: 36px
+
+
+
+h5
+    color: white
+    font:
+        family: "Open Sans"
+        size: 30px
+        style: italic
+        weight: 300
+
+.h5-bold
+    font-style: normal
+    font-weight: 600
+    font-size: 25px
+    color: white
+
+.h5-underline
+    @media screen and (max-width: 480px)
+        font-size: 2.5rem
+
+.input-contact
+    opacity: 0.85
+    transition: all 0.2s ease-out
+    border: 0px
+    display: block
+    padding:
+        left: 10px
+    margin:
+        bottom: 10px
+    @include size(320px 42px)
+    font:
+        size: 18px
+        family: "Open Sans"
+
+    &:focus
+        opacity: 1
+        outline: none
+
+.submit-contact
+    border-radius: 2px
+    display: block
+    margin-top: 30px
+    margin-left: auto
+    margin-right: auto
+    background: $dark-blue
+    border: 0px
+    display: block
+    color: white
+    padding:
+        left: 10px
+    margin:
+        bottom: 10px
+    @include size(210px 55px)
+    font:
+        size: 21px
+        family: "Open Sans"
+        weight: 600
+
+
+.col-adress
+    margin-top: 105px
+    height: 500px
+    padding-top: 40px
+    p
+        color: white
+        font:
+            family: "Open Sans"
+            size: 24px
+            weight: 300
+        line-height: 20px
+
+.adress-text
+    //border-top: 2px solid white
+    //border: 2px solid #5c5f78
+    padding: 0px
+    margin-top: 50px
+    max-width: 300px
+
+.textarea-contact
+    opacity: 0.85
+    transition: all 0.2s ease-out
+    border: 0px
+    resize: none
+    @include size(95% 400px)
+    margin-top: 20px
+    font:
+        size: 18px
+        family: "Open Sans"
+    padding:
+        left: 10px
+        top: 10px
+
+    &:focus
+        opacity: 1
+        outline: none
+
+.contact
+    min-height: 1000px
+    background: $mid-blue
+
+.ic-contact
+    margin-top: 50px
+    @include size(50px  50px)
+    transform: scale(1)
+    margin-right: 20px
+    cursor: pointer

@@ -1,0 +1,219 @@
+// main: ../main.sass
+
+@import "../1-tools/bourbon/bourbon.scss"
+@import "vars"
+
+//----------------------------navbar----------------------------
+
+.navbar-own
+    padding: 0px
+        left: 20px
+        right: 20px
+        top: 10px
+    margin: 0px
+    border-radius: 0px
+    background-color: rgba(1,1,1,0.0)
+    border: 0px
+    height: 80px
+    @media screen and (max-width: 480px)
+      padding:
+        right: 10px
+        left: 20px
+
+.icon-bar
+    background-color: white
+    width: 25px !important
+    height: 3px !important
+
+.navbar-toggle
+    border-radius: 2px
+    border: 2px solid white
+    height: 40px !important
+
+@media only screen and (max-width : 768px)
+       .navbar-collapse
+            margin-top: 0px
+            padding-top: 0px
+            z-index: 10000
+            //border: 0px solid white
+            li
+                margin-bottom: 5px
+                z-index: 10000
+                border: 0px solid white
+                //height: 30px
+                a
+                    color: $very-dark-blue
+                    background: white
+                    border: 2px solid white
+                    height: 40px
+                    z-index: 10000
+                    margin: 0px
+                    margin-bottom: 2px
+                    margin-right: 5px
+                    padding-top: 8px
+
+                    font-weight: 400
+                    &:hover
+                        background: white!important
+                        color: $very-dark-blue!important
+
+.navbar-brand
+    @include size(80px 80px)
+    margin-top: -10px
+    background-image: url("../images/logo_alt.png")
+    background-size: contain
+
+.nav-link
+    height: 52px
+    cursor: pointer
+    display: inline-block
+    margin:
+        top: 5px
+        right: 40px
+    font:
+        size: 1.85rem
+        family: 'Open Sans'
+        weight: 600
+    color: #dcdcdc
+    transition: all 0.3s ease-out
+
+    &:hover, :focus
+        background-color: transparent !important
+        color: white
+        text-decoration: none
+
+.nav-4
+    padding-bottom: 10px
+    background-color: white
+    border-radius: 1px
+    &:hover
+        background: $mid-blue!important
+
+//----------------------------indicator----------------------------//
+
+.scrollbar
+    cursor: pointer
+    width: 20px
+    float: right
+    margin-right: 20px
+    @media screen and (max-width: 480px)
+        display: none
+
+.indicator
+    cursor: pointer
+    z-index: 100000
+    position: fixed
+    top: 50%
+    transform: translateY(-50%)
+
+
+.bar-indicator
+    display: inline-block
+    cursor: pointer
+    background-color: white
+    opacity: 0.6
+    margin-bottom: 20px
+    display: block
+    @include size(13px 13px)
+    border-radius: 50%
+    border: 1px solid grey
+    transform: scale(1.1)
+    transition: all 0.4s ease-out
+
+    &:hover
+        transform: scale(1.4)
+
+.indicator-active
+    background-color: $dark-blue
+    border: 1px solid $dark-blue
+    opacity: 1
+    transform: scale(1.5)
+
+//----------------------------hero----------------------------//
+
+header
+    //position: absolute
+    text-align: center
+    padding: 0px
+    //height: 100vh
+    background-image: url("../images/header-bg.jpg")
+    //background-size: cover
+    background-repeat: no-repeat
+    background-attachment: fixed
+    overflow: hidden
+    -webkit-transform: translate3d(0,0,0)
+    @media screen and (max-width: 768px)
+        background-image: url("../images/header-bg-mid.jpg")
+        background-size: auto
+        background-attachment: fixed
+
+    @media screen and (max-width: 480px)
+        background-image: url("../images/header-bg-small.jpg")
+        background-size: auto
+        background-attachment: fixed
+
+.hero-container
+    //background: pink
+    height: 100%
+    width: 100%
+    display: flex
+    display: -webkit-flex
+    display: -moz-flex
+    justify-content: center
+    align-items: center
+
+
+.hero-text
+    opacity: 0
+    padding: 0px
+    margin-top: -200px
+    text-align: center
+    width: 100%
+    transform: scale(1.2)
+    transition: opacity 2s ease-in, transform 0.8s ease-out
+    @media screen and (max-width: 580px)
+        margin-top: -200px
+
+.hero-h1
+    text-align: center
+    font:
+        size: 9.5rem
+        family: 'Montserrat'
+        weight: 700
+    color: white
+    @media screen and (max-width: 768px)
+        font:
+            size: 7rem
+    @media screen and (max-width: 560px)
+        font:
+            size: 6rem
+
+    @media screen and (max-width: 480px)
+        font:
+            size: 5rem
+
+.hero-underline
+  text-align: center
+  margin-bottom: 6vh
+  font:
+    size: 2.8rem
+    family: 'Montserrat'
+    weight: 500
+  color: white
+
+  @media screen and (max-width: 768px)
+      font:
+          size: 2.5rem
+          family: Open Sans
+          weight: 600
+  @media screen and (max-width: 560px)
+      font:
+          size: 2.4rem
+          family: Open Sans
+          weight: 400
+
+  @media screen and (max-width: 480px)
+    font:
+        size: 2.0rem
+        family: Open Sans
+        weight: 400
